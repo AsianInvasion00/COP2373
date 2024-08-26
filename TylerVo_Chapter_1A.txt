@@ -1,4 +1,3 @@
-
 Technical Design Document Template
 
 ---
@@ -9,7 +8,7 @@ Date Created: 08/19/2024
 ---
 
 Program Description: 
-An application to pre-sell a number of cinema tickers. Each buyer can buy up to 4 tickets. No more than 20 tickets can be sold in total. Prompts the user for the desired number of tickets and then displays the number of remaining tickets after their pruchase. Application repeats until all tickets have been sold. Then displays the total number of buyers.
+An application to pre-sell several cinema tickets. Each buyer can buy up to 4 tickets. No more than 20 tickets can be sold in total. Prompts the user for the desired number of tickets and then displays the number of remaining tickets after their pruchase. Application repeats until all tickets have been sold. Then displays the total number of buyers.
 
 ---
 
@@ -34,18 +33,12 @@ Variables:
 ---
 
 Functions:
-1. Function Name: [Name of the function]  
-   Description: [Brief description of what the function does]  
-   Parameters: [List and describe the parameters the function takes]  
-   Returns: [Describe what the function returns]
-
-2. Function Name: [Name of the function]  
-   Description: [Brief description of what the function does]  
-   Parameters: [List and describe the parameters the function takes]  
-   Returns: [Describe what the function returns]
-
-3. [Add more functions as needed]
-
+1. Function Name: ticket_sale  
+   Description: Manages the ticket sale process. Prompting the user for input then validating the input and processing the sale. The ticket count will be updated and track the number of buyers. The function loops until all tickets are sold. Once the sale is complete it will display the total number of buyers 
+   Parameters: 
+	Total_tickets: the initial total number of tickets available (initial 20)
+	Max_tickets_per_buyer: the maximum numbers a single buyer can purchase in one transaction (4 tickets max)
+   Returns: Number of buyers in the transaction
 ---
 
 Link to repository: https://github.com/AsianInvasion00/COP2373.git
