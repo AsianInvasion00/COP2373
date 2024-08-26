@@ -8,7 +8,7 @@ Date Created: 08/19/2024
 ---
 
 Program Description: 
-An application to pre-sell several cinema tickets. Each buyer can buy up to 4 tickets. No more than 20 tickets can be sold in total. Prompts the user for the desired number of tickets and then displays the number of remaining tickets after their pruchase. Application repeats until all tickets have been sold. Then displays the total number of buyers.
+An application to pre-sell several cinema tickets. Each buyer can buy up to 4 tickets. No more than 20 tickets can be sold in total. Prompts the user for the desired number of tickets and then displays the number of remaining tickets after their purchase. Application repeats until all tickets have been sold. Then displays the total number of buyers.
 
 ---
 
@@ -18,9 +18,8 @@ Logical Steps:
 3. Check User input
 4. Process the Ticket Purchase
 5. Display Remaining Tickets
-6. Check Remaining Tickets
-7. Check for Tickets left
-8. Display Total Number of Buyers
+6. Repeat Until No Tickets Remain
+7. Display Total Number of Buyers
 
 ---
 
@@ -29,7 +28,7 @@ Variables:
 2. buyer_count: The number of buyers who have made a purchase.
 3. requested_tickets: Number of tickets the user has purchased in a single transaction
 4. max_tickets: Max number of tickets a buyer can purchase in one purchase
-5. min_tickets: Minimum number of tickets a buyer must purchase in one purchase
+
 ---
 
 Functions:
