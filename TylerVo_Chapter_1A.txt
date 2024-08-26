@@ -38,7 +38,8 @@ Functions:
    Parameters: 
 	Total_tickets: the initial total number of tickets available (initial 20)
 	Max_tickets_per_buyer: the maximum numbers a single buyer can purchase in one transaction (4 tickets max)
-   Returns: Number of buyers in the transaction
+   
+Returns: Number of buyers in the transaction
 ---
 
 Link to repository: https://github.com/AsianInvasion00/COP2373.git
