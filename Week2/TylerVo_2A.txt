@@ -1,0 +1,44 @@
+
+Technical Design Document Template
+
+---
+
+Name: Tyler Vo
+Date Created: 09/10/2024
+
+---
+
+Program Description: 
+This program analyzes email messages to detect potential spam by scanning for predefined spam keywords and phrases. It calculates a "spam score" based on the number of keyword occurrences and evaluates the likelihood of the email being spam
+---
+
+Logical Steps:  
+1. Create and populate a list with predefined keywords commonly found in spam emails.
+2. Prompt the user to enter the content of an email.
+3. Iterate through the email content to detect occurrences of each keyword in the spam list.
+4. For each detected keyword, increase the spam score accordingly.
+5. Categorize the email based on the spam score into risk categories (Low, Medium, High).
+6. Display the spam score, risk category, and any detected keywords to the user.
+---
+
+Variables:  
+1. spam_keywords: List containing common spam-related words and phrases.
+2. email_message: The content of the email input by the user.
+3. spam_score: Counter for the number of spam keywords detected.
+4. triggered_words: Stores the keywords detected in the email.
+---
+
+Functions:
+1. Function Name: check_spam
+
+a. Description: Scans the email for spam keywords and calculates the spam score.
+b. Parameters: email (str) - The email content to scan.
+c. Returns: int - The calculated spam score.
+2. Function Name: display_results
+
+a. Description: Outputs the results of the spam detection to the user.
+b. Parameters: score (int), category (str), keywords (list)
+c. Returns: None - Prints results to the console.
+---
+
+Link to repository: https://github.com/AsianInvasion00/COP2373.git
