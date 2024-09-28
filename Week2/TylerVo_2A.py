@@ -2,16 +2,7 @@
 #09/13/2024
 #Description: This program analyzes the content of an email entered by the user to determine if it contains common spam keywords. It calculates a 'spam score' based on the number of spam keywords detected and assesses the likelihood that the email is spam. The results, including the spam score, spam likelihood, and any triggered keywords, are displayed to the user.
 
-import time
-# Def make_timer creating a timer that will keep track of how long the program will run
-def make_timer(func):
-    def wrapper(*args, **kwargs):
-        t1 = time.time()
-        ret_val = func(*args, **kwargs)
-        t2 = time.time()
-        print("Time elapsed was", t2-t1)
-        return ret_val
-    return wrapper
+
 # List of common spam words or phrases
 spam_keywords = [
     "Free", "100% free", "Congratulations", "Winner", "Click here", 
@@ -65,8 +56,6 @@ def checker():
     email_message = input("Please enter the email message you'd like to analyze:\n")
     score, triggered_words = check_spam(email_message)
     display_results(score, triggered_words)
-    pass
 
-# Runs checker/make_timer program function
-startprogram = make_timer(checker)
-startprogram()
+# Runs checker function
+checker()
