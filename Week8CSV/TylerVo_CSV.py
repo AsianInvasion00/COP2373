@@ -4,16 +4,25 @@
 import csv
 
 
-def write_student_exam():
+def get_valid_int(prompt):
+    # Get a valid integer input
+    while True:
+        value = input(prompt)
+        if value.isdigit():
+            return int(value)
+        else:
+            print("Please enter a valid integer.")
 
+
+def write_student_exam():
     # Prompt for the number of students
-    num_students = int(input("Enter the number of students: "))
+    num_students = get_valid_int("Enter the number of students: ")
 
     # Create and write the CSV header
     with open('grades.csv', 'w', newline='') as file:
         writer = csv.writer(file)
 
-        # Table header
+        # Header
         writer.writerow(["First Name", "Last Name", "Exam 1", "Exam 2", "Exam 3"])
 
         # Collect and write student data
@@ -21,9 +30,9 @@ def write_student_exam():
             print(f"Enter data for student {i + 1}:")
             first_name = input("First Name: ")
             last_name = input("Last Name: ")
-            exam1 = int(input("Exam 1 grade: "))
-            exam2 = int(input("Exam 2 grade: "))
-            exam3 = int(input("Exam 3 grade: "))
+            exam1 = get_valid_int("Exam 1 grade: ")
+            exam2 = get_valid_int("Exam 2 grade: ")
+            exam3 = get_valid_int("Exam 3 grade: ")
 
             # Write the data to the file
             writer.writerow([first_name, last_name, exam1, exam2, exam3])
@@ -41,7 +50,7 @@ def read_student_exam():
             for row in reader:
                 print("{:<15} {:<15} {:<7} {:<7} {:<7}".format(*row))
     except FileNotFoundError:
-        print(f"grades.csv not found.")
+        print("grades.csv not found.")
 
 
 def main():
